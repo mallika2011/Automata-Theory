@@ -16,15 +16,15 @@ python3 script.py
 ## Brief description of an NFA and DFA
 
 Consider an NFA 
-    N=<Q<sub>n</sub>,q<sub>n</sub> ,Σ<sub>n</sub> ,δ<sub>n</sub>:Q<sub>n</sub>xΣ<sub>n</sub>->Q<sub>n</sub> ,F<sub>n</sub>>
+    N=<   Q<sub>n</sub>,    q<sub>n</sub>,    Σ<sub>n</sub>,    δ<sub>n</sub>  :  Q<sub>n</sub>  x  Σ<sub>n</sub>  -->  Q<sub>n</sub>,   F<sub>n</sub>   >
 
 And its equivalent DFA
-    D=<Q<sub>d</sub>,q<sub>d</sub> ,Σ<sub>d</sub> ,δ<sub>d</sub>, F<sub>d</sub>>
+    D=<   Q<sub>d</sub>,   q<sub>d</sub>,   Σ<sub>d</sub>,   δ<sub>d</sub>,   F<sub>d</sub>     >
 
 Then the following relations exist:
-    -Q<sub>d</sub>=2<sup>Q<sub>n</sub></sup> (Power set of Q<sub>n</sub>)
-    -q<sub>d</sub>=q<sub>n</sub>
-    -Σ<sub>d</sub>=Σ<sub>n</sub>
+    * Q<sub>d</sub>=2<sup>Q<sub>n</sub></sup> (Power set of Q<sub>n</sub>)
+    * q<sub>d</sub>=q<sub>n</sub>
+    * Σ<sub>d</sub>=Σ<sub>n</sub>
 
 ## Procedure of Conversion (CODE)
 
