@@ -103,7 +103,15 @@ print(relation)
 
 #********************************************** DETERMINING FINAL STATES ***********************************************************
 
-final_states=[]
+final_states=obj["final"]
+
+for i in range(0,len(final_states)):
+    if(isinstance(final_states[i],list)):
+        temp=0
+    else:
+        l=[]
+        l.append(final_states[i])
+        final_states[i]=l
 
 for i in range(0,len(relation)):
     s=relation[i][2]
@@ -113,25 +121,35 @@ for i in range(0,len(relation)):
             final_states.append(s)
 
 copy=final_states
+
+for i in range(0,len(relation)):
+    s=relation[i][2]
+    for j in range(0,len(copy)):
+        set1=set(s)
+        set2=set(copy[j])
+        if(set1.intersection(set2)==set2):
+            final_states.append(s)
+
+copy=final_states
 check_copy=[]
 for i in range(0, len(final_states)):
     check_copy.append(0)
 
+# print(check_copy)
+# print(copy)
+
 for i in range(0, len(copy)):
     for j in range(0, len(copy)):
-        if(set(copy[i])==set(copy[j]) and i!=j and check_copy[j]!=2 and check_copy[i]!=2):
-            # final_states.remove(copy[i])
-            check_copy[i]=1
-            check_copy[j]=2
-            # print(set(copy[i])==set(copy[j]))
+        if(set(copy[i])==set(copy[j]) and i!=j and check_copy[i]!=1):
+            check_copy[j]=1
 
+# print(check_copy)
 final_st=[]
 
 for i in range(0, len(check_copy)):
     if(check_copy[i]!=1):
         final_st.append(final_states[i])
-
-print(final_st)
+# print(final_st)
 
 #****************************************************** CREATING FINAL JSON *********************************************************
 
