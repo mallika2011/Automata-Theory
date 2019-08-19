@@ -167,7 +167,7 @@ print(finaljson)
 
 with open("output.json",'w') as f2:
     # f2.write(finaljson)
-    json.dump(finaljson,f2)
+    json.dump(finaljson,f2,indent=2)
 
 f.close()
 f2.close()
