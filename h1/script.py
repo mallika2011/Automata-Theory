@@ -7,7 +7,7 @@ obj=json.loads(data)
 
 #*****************************************PRINTS THE NFA MODEL *****************************************************
 
-print(obj)           
+# print(obj)           
 
 
 def func (a,stateno):
@@ -46,7 +46,7 @@ for c in range(0,pset_size):
 
 #******************************************************** PRINTING THE SUBSETS ***************************************
 
-print (subsets)                                         
+# print (subsets)                                         
 max=pow(2,obj['states']-1)
 stateno=0
 mark=[]
@@ -73,7 +73,7 @@ for i in range(1,max+1):
 
 
 # print(mark)
-print(relation)
+# print(relation)
 
 #**************************************************CREATING THE UNION OF THE REMAINING SUBSETS *********************************
 
@@ -99,7 +99,7 @@ for j in range(0,pset_size):
     j=j+1
 
     
-print(relation)
+# print(relation)
 
 #********************************************** DETERMINING FINAL STATES ***********************************************************
 
@@ -160,7 +160,7 @@ finaljson={
     "start":obj['start'],
     "final":final_st
 }
-print(finaljson)
+# print(finaljson)
 
 
 #*************************************************** WRITING INTO FINAL JSON **********************************************************
